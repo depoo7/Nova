@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Chakra Petch', 'Cairo', system-ui, sans-serif;
+    --font-sans-ltr: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-sans-rtl: 'Cairo', 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #05070b;
+    color: #e6edf7;
+  }
+
+  html[dir='rtl'] body {
+    font-family: var(--font-sans-rtl);
+  }
+
+  html[dir='ltr'] body {
+    font-family: var(--font-sans-ltr);
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tech,
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.nova-panel {
+  background-color: rgba(7, 11, 17, 0.68);
+  background-image:
+    linear-gradient(rgba(148, 197, 232, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 197, 232, 0.03) 1px, transparent 1px);
+  background-size: 16px 16px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow:
+    inset 0 0 0 1px rgba(125, 211, 252, 0.05),
+    0 10px 28px rgba(0, 0, 0, 0.52);
+}
+
+.nova-panel-amber {
+  background-color: rgba(16, 12, 8, 0.68);
+  background-image:
+    linear-gradient(rgba(251, 191, 36, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(251, 191, 36, 0.035) 1px, transparent 1px);
+  background-size: 16px 16px;
+  border: 1px solid rgba(245, 158, 11, 0.36);
+  box-shadow:
+    inset 0 0 0 1px rgba(251, 191, 36, 0.08),
+    0 10px 28px rgba(0, 0, 0, 0.52);
+}
+
+.nasa-card {
+  position: relative;
+  background-color: rgba(6, 10, 17, 0.52);
+  background-image:
+    linear-gradient(rgba(125, 211, 252, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125, 211, 252, 0.04) 1px, transparent 1px);
+  background-size: 14px 14px;
+  border: 1px solid rgba(148, 197, 232, 0.2);
+  box-shadow:
+    inset 0 0 18px rgba(56, 189, 248, 0.04),
+    inset 0 1px 0 rgba(226, 232, 240, 0.06);
+}
+
+.nasa-card::before,
+.nasa-card::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  pointer-events: none;
+  border-color: rgba(125, 211, 252, 0.55);
+}
+
+.nasa-card::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1.5px solid rgba(125, 211, 252, 0.55);
+  border-left: 1.5px solid rgba(125, 211, 252, 0.55);
+}
+
+.nasa-card::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1.5px solid rgba(125, 211, 252, 0.55);
+  border-right: 1.5px solid rgba(125, 211, 252, 0.55);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.35);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  .nova-print-report,
+  .nova-print-report * {
+    color: #0f172a !important;
+    background: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: none !important;
+  }
+}
+

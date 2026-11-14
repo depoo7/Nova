@@ -1,0 +1,6 @@
+{
+  "name": "NOVA: Beyond the Unknown",
+  "description": "Pilot your customized NOVA spacecraft across 6 worlds, survive dynamic space weather, drive a 6-wheel planetary rover, and explore with Sky AI in Arabic and English.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
